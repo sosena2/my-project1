@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      h1 {
+        text-align: center;
+        color: #57385c;
+        margin: 10 auto;
+        border: 1px solid #83580b;
+        border-radius:4px;
+        padding: 10px;
+        font-size: 48px;
+      }
+      h2 {
+        text-align: center;
+        color: #83580b;
+        font-size: 35px;
+      }
+      img {
+        display: block;
+        margin: 0 auto;
+        max-width: 90%;
+        border-radius: 12px;
+      }
+      span {
+        font-weight: bold;
+      }
+      p {
+        text-align: center;
+        margin: 10px 50px 0 0;
+        padding: 0 auto;
+        line-height: 1.7;
+        font-size: 20px;
+      }
+      button {
+        display: block;
+        margin: 0 auto;
+        font-size: 30px;
+        border-radius: 10px;
+        background-color:white;
+        color:#83580b;
+        border: 1px solid #83580b;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+        transition: all 170ms ease-in-out;
+      }
+
+      .visit :hover {
+        cursor: pointer;
+        background: #83580b;
+        color:white;
+        
+      }
+      .park {
+        background: radial-gradient(
+          circle at 10% 20%,
+          rgb(254, 255, 165) 0%,
+          rgb(255, 232, 182) 90%
+        );
+        margin: 50 auto;
+        text-align: center;
+        padding: 25px 0 0 50px;
+      }
+      .address {
+        color:#385170;
+      }
+      .address :hover {
+        text-decoration:none;
+        color: black;
+      
+      }
+    </style>
+  </head>
+  <body>
+    <div class="park">
+      <h1>&#x1F60A Bale national park is Awesome</h1>
+      <h2>
+        especially the red wolves...
+        </h2>
+      <hr />
+      <img
+        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/116/930/original/The-Ethiopian-Wolf.jpg?1709108517"
+        alt="The-Ethiopian-Wolf"
+      />
+      <hr />
+      <p>
+        <span>The Ethiopian wolf</span>, also called the <strong>red jackal</strong>, the <strong>Simien
+        jackal</strong> or <strong>Simien fox</strong>, is a canine native to the Ethiopian Highlands. In
+        southeastern Ethiopia, it is also known as the horse jackal. It is
+        similar to the coyote in size and build, and is distinguished by its
+        long and narrow skull, and its red and white fur.
+        <br />
+        <a
+          href="https://en.wikipedia.org/wiki/Ethiopian_wolf"
+          target="_blank"
+          class="address"
+        >
+          learn more on wikepedia
+        </a>
+      </p>
+      <br />
+      <div class="visit">
+        <button>visit Bale national park</button>
+      </div>
+      <em>
+      <p>coded by sosena Gossaye</p>
+      </em>
+    </div>
+    <script>
+      function visitPark() {
+      let name = prompt("what is your name?");
+      let email = prompt("what is your email?");
+      if (name.length!=0 && email.length!=0) {
+        alert("thanks "+name+", and we will be happy to help you to book your trip to Bale national park!");
+      
+      } else {
+        alert("sorry, you should first give us the necessary information to get our help");
+    
+      }
+    }
+    let contactButton = document.querySelector("button");
+    contactButton.addEventListener("click", visitPark);
+  </script>
+  </body>
+</html>
